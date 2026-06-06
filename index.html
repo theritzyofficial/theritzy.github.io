@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THE RITZY | Official Artist</title>
+<title>THE RITZY | Producer & Electronic Artist</title>
 
-<meta name="description" content="Official website of The Ritzy - Producer, Sound Engineer and Electronic Artist.">
+<meta name="description" content="The Ritzy is an electronic music producer and sound engineer creating cinematic dark soundscapes and modern beats.">
+<meta name="keywords" content="The Ritzy, Ritzy music, electronic producer, trap, EDM, sound design, Iran artist">
+<meta name="author" content="The Ritzy">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
@@ -25,40 +27,36 @@ background:#050505;
 color:white;
 }
 
+/* HERO */
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1800');
-background-size:cover;
-background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2000');
+background-size:cover;
+background-position:center;
 }
 
-.hero-content h1{
-font-size:clamp(60px,12vw,140px);
+.hero h1{
+font-size:clamp(60px,12vw,150px);
+letter-spacing:12px;
 font-weight:900;
-letter-spacing:10px;
 }
 
-.hero-content p{
-margin-top:20px;
-font-size:20px;
-color:#cfcfcf;
-}
-
-.btns{
-margin-top:35px;
+.hero p{
+color:#ccc;
+margin-top:15px;
+font-size:18px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 30px;
 margin:10px;
+padding:14px 28px;
 border:1px solid white;
 border-radius:50px;
 color:white;
@@ -71,47 +69,57 @@ background:white;
 color:black;
 }
 
+/* SECTIONS */
 section{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:100px 30px;
+padding:100px 20px;
 }
 
-.section-title{
-font-size:42px;
-margin-bottom:30px;
+h2{
+font-size:40px;
+margin-bottom:25px;
 }
 
 .about p{
+color:#bbb;
 line-height:1.9;
-color:#c8c8c8;
 font-size:18px;
 }
 
+/* MUSIC */
 .music-box{
-padding:35px;
+padding:30px;
 border:1px solid #222;
 border-radius:20px;
 background:#0b0b0b;
-margin-top:20px;
 }
 
-.social-grid{
+/* SOUND CLOUD */
+iframe{
+margin-top:20px;
+border-radius:12px;
+}
+
+/* SOCIAL */
+.social{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 margin-top:30px;
 }
 
 .card{
-background:#0b0b0b;
+padding:25px;
 border:1px solid #222;
-padding:30px;
 border-radius:20px;
+background:#0b0b0b;
+transition:.3s;
 }
 
-.card h3{
-margin-bottom:15px;
+.card:hover{
+transform:translateY(-5px);
+border-color:white;
 }
 
 .card a{
@@ -119,11 +127,12 @@ color:white;
 text-decoration:none;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:50px;
-border-top:1px solid #1a1a1a;
-color:#777;
+color:#666;
+border-top:1px solid #222;
 }
 
 </style>
@@ -131,126 +140,74 @@ color:#777;
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
-
-<div class="hero-content">
-
+<div>
 <h1>THE RITZY</h1>
-
-<p>
-Producer • Sound Engineer • Electronic Artist
-</p>
-
-<div class="btns">
-
-<a class="btn"
-href="https://instagram.com/Ritzybeat">
-Instagram
-</a>
-
-<a class="btn"
-href="https://youtube.com/@theritzyboss">
-YouTube
-</a>
-
-<a class="btn"
-href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">
-SoundCloud
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="about">
-
-<h2 class="section-title">
-ABOUT
-</h2>
-
-<p>
-
-THE RITZY is an independent producer and sound engineer from Shiraz, Iran.
-
-Focused on cinematic sound design, dark electronic textures and modern music production, he creates immersive experiences inspired by emotion, atmosphere and rhythm.
-
-</p>
-
-</section>
-
-<section>
-
-<h2 class="section-title">
-LATEST MUSIC
-</h2>
-
-<div class="music-box">
-
-<p>
-
-Listen to the latest releases and upcoming projects on SoundCloud.
-
-</p>
+<p>Producer • Sound Engineer • Electronic Artist</p>
 
 <br>
 
-<a class="btn"
-href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">
-Open SoundCloud
-</a>
-
+<a class="btn" href="https://instagram.com/Ritzybeat">Instagram</a>
+<a class="btn" href="https://youtube.com/@theritzyboss">YouTube</a>
+<a class="btn" href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">SoundCloud</a>
 </div>
-
 </section>
 
+<!-- ABOUT -->
+<section class="about">
+<h2>ABOUT</h2>
+<p>
+THE RITZY is an independent electronic music producer and sound engineer from Iran.
+Focused on cinematic sound design, dark atmospheres and modern electronic beats,
+he creates immersive audio experiences for listeners worldwide.
+</p>
+</section>
+
+<!-- MUSIC -->
 <section>
+<h2>FEATURED MUSIC</h2>
 
-<h2 class="section-title">
-CONNECT
-</h2>
+<div class="music-box">
 
-<div class="social-grid">
+<p>Listen to latest tracks on SoundCloud:</p>
 
-<div class="card">
-
-<h3>Instagram</h3>
-
-<a href="https://instagram.com/Ritzybeat">
-@Ritzybeat
-</a>
+<iframe width="100%" height="166"
+scrolling="no" frameborder="no"
+allow="autoplay"
+src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-LINK&color=%23000000&auto_play=false&show_user=true">
+</iframe>
 
 </div>
-
-<div class="card">
-
-<h3>YouTube</h3>
-
-<a href="https://youtube.com/@theritzyboss">
-@theritzyboss
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>SoundCloud</h3>
-
-<a href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">
-The Ritzy
-</a>
-
-</div>
-
-</div>
-
 </section>
 
+<!-- SOCIAL -->
+<section>
+<h2>CONNECT</h2>
+
+<div class="social">
+
+<div class="card">
+<h3>Instagram</h3>
+<a href="https://instagram.com/Ritzybeat">@Ritzybeat</a>
+</div>
+
+<div class="card">
+<h3>YouTube</h3>
+<a href="https://youtube.com/@theritzyboss">@theritzyboss</a>
+</div>
+
+<div class="card">
+<h3>SoundCloud</h3>
+<a href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">The Ritzy</a>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
-© 2025 THE RITZY
-
+© 2025 THE RITZY • All Rights Reserved
 </footer>
 
 </body>
