@@ -6,6 +6,8 @@
 
 <title>THE RITZY | Hip-Hop Artist</title>
 
+<meta name="description" content="THE RITZY - Persian Hip-Hop Artist & Producer. Dark cinematic underground sound.">
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
@@ -23,76 +25,51 @@ color:white;
 overflow-x:hidden;
 }
 
-/* INTRO SCREEN */
-.intro{
+/* 🎬 VIDEO BACKGROUND */
+.video-bg{
 position:fixed;
-width:100%;
-height:100vh;
-background:black;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-z-index:999;
-animation:fadeOut 1s ease forwards;
-animation-delay:3.5s;
-}
-
-.intro h1{
-font-size:60px;
-letter-spacing:10px;
-animation:zoom 2s ease;
-}
-
-.intro p{
-color:#aaa;
-margin-top:10px;
-}
-
-@keyframes zoom{
-from{transform:scale(0.5); opacity:0;}
-to{transform:scale(1); opacity:1;}
-}
-
-@keyframes fadeOut{
-to{opacity:0; visibility:hidden;}
-}
-
-/* BACKGROUND */
-.bg{
-position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
-background:
-radial-gradient(circle at 20% 20%, #111, transparent),
-radial-gradient(circle at 80% 80%, #1a1a1a, transparent),
-radial-gradient(circle at 50% 50%, #000, #000);
+overflow:hidden;
 z-index:-1;
 }
 
-/* HERO */
+.video-bg video{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.35) contrast(1.2);
+}
+
+/* CENTER HERO */
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+flex-direction:column;
 }
 
 .hero h1{
-font-size:clamp(60px,12vw,170px);
-letter-spacing:15px;
+font-size:clamp(50px,10vw,140px);
+letter-spacing:12px;
+font-weight:900;
 }
 
 .hero p{
-color:#aaa;
+color:#bbb;
 margin-top:15px;
+font-size:16px;
 }
 
+/* BUTTONS */
 .btn{
 display:inline-block;
 margin:10px;
-padding:14px 30px;
+padding:12px 28px;
 border:1px solid white;
 border-radius:50px;
 color:white;
@@ -107,48 +84,49 @@ color:black;
 
 /* SECTIONS */
 section{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
-padding:120px 20px;
+padding:100px 20px;
 }
 
 h2{
-font-size:42px;
-margin-bottom:25px;
+font-size:38px;
+margin-bottom:20px;
 }
 
 /* MUSIC */
 .music{
-padding:30px;
+padding:25px;
 border:1px solid #222;
-border-radius:20px;
-background:#0b0b0b;
+border-radius:16px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(10px);
 }
 
 /* RELEASES */
 .releases{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
 .release{
-padding:25px;
+padding:20px;
 border:1px solid #222;
-border-radius:20px;
-background:#0b0b0b;
+border-radius:14px;
+background:rgba(255,255,255,0.02);
 transition:.3s;
 }
 
 .release:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 border-color:white;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:60px;
+padding:50px;
 color:#666;
 border-top:1px solid #111;
 }
@@ -159,29 +137,23 @@ border-top:1px solid #111;
 
 <body>
 
-<!-- INTRO -->
-<div class="intro">
-<h1>THE RITZY</h1>
-<p>Entering World...</p>
+<!-- 🎬 BACKGROUND VIDEO -->
+<div class="video-bg">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-smoke-and-light-1573/1080p.mp4" type="video/mp4">
+</video>
 </div>
-
-<div class="bg"></div>
 
 <!-- HERO -->
 <section class="hero">
 
-<div>
-
 <h1>THE RITZY</h1>
-
 <p>Persian Hip-Hop Artist • Producer • Sound Engineer</p>
 
-<br>
-
+<div>
 <a class="btn" href="https://instagram.com/Ritzybeat">Instagram</a>
 <a class="btn" href="https://youtube.com/@theritzyboss">YouTube</a>
 <a class="btn" href="https://on.soundcloud.com/k8C2y8AoLXM3782Q5p">SoundCloud</a>
-
 </div>
 
 </section>
@@ -192,8 +164,8 @@ border-top:1px solid #111;
 <h2>ABOUT</h2>
 
 <p>
-THE RITZY is a Persian Hip-Hop artist focused on dark trap beats,
-underground sound design and cinematic music experiences.
+THE RITZY is a Persian Hip-Hop artist focused on cinematic sound,
+dark trap beats and underground music identity.
 </p>
 
 </section>
@@ -201,7 +173,7 @@ underground sound design and cinematic music experiences.
 <!-- MUSIC -->
 <section>
 
-<h2>LATEST TRACK</h2>
+<h2>MUSIC</h2>
 
 <div class="music">
 
@@ -222,18 +194,18 @@ src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/theritzy&auto
 <div class="releases">
 
 <div class="release">
-<h3>Track 1</h3>
-<p>Dark Hip-Hop Beat</p>
+<h3>Latest Track</h3>
+<p>Dark Hip-Hop / Cinematic Trap</p>
 </div>
 
 <div class="release">
-<h3>Track 2</h3>
-<p>Trap Cinematic Vibe</p>
+<h3>Underground Beat</h3>
+<p>Raw street sound</p>
 </div>
 
 <div class="release">
-<h3>Track 3</h3>
-<p>Underground Sound</p>
+<h3>Experimental</h3>
+<p>Ambient hip-hop fusion</p>
 </div>
 
 </div>
