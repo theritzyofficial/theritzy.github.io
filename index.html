@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THE RITZY | Producer & Electronic Artist</title>
+<title>THE RITZY | Official Artist</title>
 
-<meta name="description" content="The Ritzy is an electronic music producer and sound engineer creating cinematic dark soundscapes and modern beats.">
-<meta name="keywords" content="The Ritzy, Ritzy music, electronic producer, trap, EDM, sound design, Iran artist">
-<meta name="author" content="The Ritzy">
+<meta name="description" content="The Ritzy - Electronic Music Producer & Sound Designer. Dark cinematic beats and modern electronic sound.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
@@ -23,8 +21,29 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#050505;
+background:black;
 color:white;
+overflow-x:hidden;
+}
+
+/* ANIMATED BACKGROUND */
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, #111, transparent),
+radial-gradient(circle at 80% 80%, #1a1a1a, transparent),
+radial-gradient(circle at 50% 50%, #000, #000);
+z-index:-1;
+animation:move 10s infinite alternate;
+}
+
+@keyframes move{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
 }
 
 /* HERO */
@@ -34,29 +53,36 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
-url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2000');
-background-size:cover;
-background-position:center;
+position:relative;
 }
 
 .hero h1{
-font-size:clamp(60px,12vw,150px);
-letter-spacing:12px;
+font-size:clamp(60px,12vw,160px);
+letter-spacing:15px;
 font-weight:900;
+text-shadow:0 0 30px rgba(255,255,255,0.1);
+animation:fadeIn 2s ease;
 }
 
 .hero p{
-color:#ccc;
-margin-top:15px;
-font-size:18px;
+color:#bbb;
+margin-top:20px;
+animation:fadeIn 3s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.btns{
+margin-top:35px;
 }
 
 .btn{
 display:inline-block;
 margin:10px;
-padding:14px 28px;
+padding:14px 30px;
 border:1px solid white;
 border-radius:50px;
 color:white;
@@ -67,42 +93,47 @@ transition:.3s;
 .btn:hover{
 background:white;
 color:black;
+transform:scale(1.05);
 }
 
 /* SECTIONS */
 section{
 max-width:1100px;
 margin:auto;
-padding:100px 20px;
+padding:120px 20px;
+opacity:0;
+transform:translateY(40px);
+animation:up 1s forwards;
+animation-delay:0.3s;
+}
+
+@keyframes up{
+to{opacity:1; transform:translateY(0);}
 }
 
 h2{
-font-size:40px;
+font-size:42px;
 margin-bottom:25px;
+letter-spacing:3px;
 }
 
 .about p{
 color:#bbb;
-line-height:1.9;
+line-height:2;
 font-size:18px;
 }
 
 /* MUSIC */
-.music-box{
+.music{
 padding:30px;
 border:1px solid #222;
 border-radius:20px;
-background:#0b0b0b;
-}
-
-/* SOUND CLOUD */
-iframe{
-margin-top:20px;
-border-radius:12px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(10px);
 }
 
 /* SOCIAL */
-.social{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
@@ -113,12 +144,12 @@ margin-top:30px;
 padding:25px;
 border:1px solid #222;
 border-radius:20px;
-background:#0b0b0b;
-transition:.3s;
+background:rgba(255,255,255,0.02);
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 border-color:white;
 }
 
@@ -130,62 +161,71 @@ text-decoration:none;
 /* FOOTER */
 footer{
 text-align:center;
-padding:50px;
+padding:60px;
 color:#666;
-border-top:1px solid #222;
+border-top:1px solid #111;
 }
 
 </style>
 
 </head>
+
 <body>
 
-<!-- HERO -->
+<div class="bg"></div>
+
 <section class="hero">
+
 <div>
+
 <h1>THE RITZY</h1>
+
 <p>Producer • Sound Engineer • Electronic Artist</p>
 
-<br>
+<div class="btns">
 
 <a class="btn" href="https://instagram.com/Ritzybeat">Instagram</a>
 <a class="btn" href="https://youtube.com/@theritzyboss">YouTube</a>
 <a class="btn" href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">SoundCloud</a>
+
 </div>
+
+</div>
+
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-<h2>ABOUT</h2>
-<p>
-THE RITZY is an independent electronic music producer and sound engineer from Iran.
-Focused on cinematic sound design, dark atmospheres and modern electronic beats,
-he creates immersive audio experiences for listeners worldwide.
-</p>
-</section>
-
-<!-- MUSIC -->
 <section>
-<h2>FEATURED MUSIC</h2>
 
-<div class="music-box">
+<h2>ABOUT</h2>
 
-<p>Listen to latest tracks on SoundCloud:</p>
+<p>
+THE RITZY is an electronic music producer and sound designer focused on cinematic,
+dark and emotional soundscapes. Creating immersive audio experiences inspired by modern electronic culture.
+</p>
+
+</section>
+
+<section>
+
+<h2>MUSIC</h2>
+
+<div class="music">
 
 <iframe width="100%" height="166"
 scrolling="no" frameborder="no"
 allow="autoplay"
-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-LINK&color=%23000000&auto_play=false&show_user=true">
+src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-LINK&color=%23000000&auto_play=false">
 </iframe>
 
 </div>
+
 </section>
 
-<!-- SOCIAL -->
 <section>
-<h2>CONNECT</h2>
 
-<div class="social">
+<h2>SOCIALS</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>Instagram</h3>
@@ -199,13 +239,13 @@ src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-LINK&col
 
 <div class="card">
 <h3>SoundCloud</h3>
-<a href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">The Ritzy</a>
+<a href="https://on.soundcloud.com/v3FpHzs3Qdy6PZQPDO">Listen</a>
 </div>
 
 </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
 © 2025 THE RITZY • All Rights Reserved
 </footer>
