@@ -6,7 +6,7 @@
 
 <title>THE RITZY | Official Artist</title>
 
-<meta name="description" content="The Ritzy - Electronic Music Producer & Sound Designer. Dark cinematic beats and modern electronic sound.">
+<meta name="description" content="THE RITZY - Persian Hip-Hop Artist & Producer. Dark beats, trap and underground sound.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
@@ -26,11 +26,9 @@ color:white;
 overflow-x:hidden;
 }
 
-/* ANIMATED BACKGROUND */
+/* BACKGROUND GLOW */
 .bg{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 background:
@@ -38,12 +36,12 @@ radial-gradient(circle at 20% 20%, #111, transparent),
 radial-gradient(circle at 80% 80%, #1a1a1a, transparent),
 radial-gradient(circle at 50% 50%, #000, #000);
 z-index:-1;
-animation:move 10s infinite alternate;
+animation:fadebg 8s infinite alternate;
 }
 
-@keyframes move{
-0%{transform:scale(1);}
-100%{transform:scale(1.1);}
+@keyframes fadebg{
+from{transform:scale(1);}
+to{transform:scale(1.1);}
 }
 
 /* HERO */
@@ -57,16 +55,15 @@ position:relative;
 }
 
 .hero h1{
-font-size:clamp(60px,12vw,160px);
+font-size:clamp(60px,12vw,170px);
 letter-spacing:15px;
 font-weight:900;
-text-shadow:0 0 30px rgba(255,255,255,0.1);
 animation:fadeIn 2s ease;
 }
 
 .hero p{
 color:#bbb;
-margin-top:20px;
+margin-top:15px;
 animation:fadeIn 3s ease;
 }
 
@@ -75,10 +72,7 @@ from{opacity:0; transform:translateY(20px);}
 to{opacity:1; transform:translateY(0);}
 }
 
-.btns{
-margin-top:35px;
-}
-
+/* BUTTONS */
 .btn{
 display:inline-block;
 margin:10px;
@@ -102,9 +96,8 @@ max-width:1100px;
 margin:auto;
 padding:120px 20px;
 opacity:0;
-transform:translateY(40px);
 animation:up 1s forwards;
-animation-delay:0.3s;
+animation-delay:.3s;
 }
 
 @keyframes up{
@@ -117,6 +110,7 @@ margin-bottom:25px;
 letter-spacing:3px;
 }
 
+/* ABOUT */
 .about p{
 color:#bbb;
 line-height:2;
@@ -128,8 +122,7 @@ font-size:18px;
 padding:30px;
 border:1px solid #222;
 border-radius:20px;
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(10px);
+background:#0b0b0b;
 }
 
 /* SOCIAL */
@@ -137,25 +130,34 @@ backdrop-filter:blur(10px);
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-margin-top:30px;
 }
 
 .card{
 padding:25px;
 border:1px solid #222;
 border-radius:20px;
-background:rgba(255,255,255,0.02);
-transition:.4s;
+background:#0b0b0b;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 border-color:white;
 }
 
-.card a{
-color:white;
-text-decoration:none;
+/* WOLF LOGO PLACEHOLDER */
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+border:1px solid #333;
+margin:auto;
+margin-bottom:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#555;
+font-size:14px;
 }
 
 /* FOOTER */
@@ -174,15 +176,20 @@ border-top:1px solid #111;
 
 <div class="bg"></div>
 
+<!-- HERO -->
 <section class="hero">
 
 <div>
 
+<div class="logo">
+WOLF LOGO
+</div>
+
 <h1>THE RITZY</h1>
 
-<p>Producer • Sound Engineer • Electronic Artist</p>
+<p>Persian Hip-Hop Artist • Producer • Sound Engineer</p>
 
-<div class="btns">
+<br>
 
 <a class="btn" href="https://instagram.com/Ritzybeat">Instagram</a>
 <a class="btn" href="https://youtube.com/@theritzyboss">YouTube</a>
@@ -190,40 +197,53 @@ border-top:1px solid #111;
 
 </div>
 
-</div>
-
 </section>
 
+<!-- ABOUT -->
 <section>
 
 <h2>ABOUT</h2>
 
 <p>
-THE RITZY is an electronic music producer and sound designer focused on cinematic,
-dark and emotional soundscapes. Creating immersive audio experiences inspired by modern electronic culture.
+THE RITZY is a Persian Hip-Hop artist and producer from Iran.
+Focused on dark hip-hop beats, trap rhythms, and underground sound design.
+This project represents raw emotion, street culture, and cinematic sound.
 </p>
 
 </section>
 
+<!-- MUSIC -->
 <section>
 
 <h2>MUSIC</h2>
 
 <div class="music">
 
-<iframe width="100%" height="166"
-scrolling="no" frameborder="no"
+<iframe width="100%" height="166" scrolling="no" frameborder="no"
 allow="autoplay"
-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-LINK&color=%23000000&auto_play=false">
+src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/theritzy&color=%23000000&auto_play=false">
 </iframe>
 
 </div>
 
 </section>
 
+<!-- PRESS / BRAND -->
 <section>
 
-<h2>SOCIALS</h2>
+<h2>PRESS</h2>
+
+<p>
+Independent artist building a unique identity in Persian underground hip-hop culture.
+Focused on emotional sound, cinematic production, and modern trap aesthetics.
+</p>
+
+</section>
+
+<!-- SOCIAL -->
+<section>
+
+<h2>CONNECT</h2>
 
 <div class="grid">
 
