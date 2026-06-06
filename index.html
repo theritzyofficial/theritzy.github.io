@@ -6,8 +6,6 @@
 
 <title>THE RITZY | Hip-Hop Artist</title>
 
-<meta name="description" content="THE RITZY - Persian Hip-Hop Artist & Producer. Dark cinematic underground sound.">
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
@@ -25,25 +23,86 @@ color:white;
 overflow-x:hidden;
 }
 
-/* 🎬 VIDEO BACKGROUND */
-.video-bg{
+/* 🎬 SMOKE BACKGROUND */
+.smoke{
 position:fixed;
+width:100%;
+height:100%;
+background:url("https://i.imgur.com/9Q9ZQZb.png");
+background-size:cover;
+background-position:center;
+opacity:0.25;
+animation:smokeMove 20s infinite linear;
+z-index:-2;
+}
+
+@keyframes smokeMove{
+0%{transform:scale(1) translateX(0);}
+50%{transform:scale(1.2) translateX(-20px);}
+100%{transform:scale(1) translateX(0);}
+}
+
+/* DARK OVERLAY */
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle, transparent 20%, black 80%);
+z-index:-1;
+}
+
+/* GLITCH TEXT */
+.glitch{
+font-size:clamp(60px,10vw,150px);
+font-weight:900;
+letter-spacing:15px;
+position:relative;
+}
+
+.glitch::before,
+.glitch::after{
+content:"THE RITZY";
+position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-overflow:hidden;
+opacity:0.8;
+}
+
+.glitch::before{
+color:#ff004c;
 z-index:-1;
+transform:translate(2px,0);
+animation:glitch1 2s infinite;
 }
 
-.video-bg video{
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(0.35) contrast(1.2);
+.glitch::after{
+color:#00fff0;
+z-index:-2;
+transform:translate(-2px,0);
+animation:glitch2 2s infinite;
 }
 
-/* CENTER HERO */
+@keyframes glitch1{
+0%{transform:translate(2px,0);}
+20%{transform:translate(-2px,1px);}
+40%{transform:translate(3px,-1px);}
+60%{transform:translate(-1px,2px);}
+80%{transform:translate(2px,-2px);}
+100%{transform:translate(2px,0);}
+}
+
+@keyframes glitch2{
+0%{transform:translate(-2px,0);}
+20%{transform:translate(2px,-1px);}
+40%{transform:translate(-3px,1px);}
+60%{transform:translate(1px,-2px);}
+80%{transform:translate(-2px,2px);}
+100%{transform:translate(-2px,0);}
+}
+
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -53,23 +112,16 @@ text-align:center;
 flex-direction:column;
 }
 
-.hero h1{
-font-size:clamp(50px,10vw,140px);
-letter-spacing:12px;
-font-weight:900;
-}
-
 .hero p{
-color:#bbb;
-margin-top:15px;
-font-size:16px;
+color:#aaa;
+margin-top:10px;
 }
 
 /* BUTTONS */
 .btn{
 display:inline-block;
 margin:10px;
-padding:12px 28px;
+padding:14px 30px;
 border:1px solid white;
 border-radius:50px;
 color:white;
@@ -90,7 +142,7 @@ padding:100px 20px;
 }
 
 h2{
-font-size:38px;
+font-size:40px;
 margin-bottom:20px;
 }
 
@@ -104,13 +156,13 @@ backdrop-filter:blur(10px);
 }
 
 /* RELEASES */
-.releases{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.release{
+.card{
 padding:20px;
 border:1px solid #222;
 border-radius:14px;
@@ -118,8 +170,8 @@ background:rgba(255,255,255,0.02);
 transition:.3s;
 }
 
-.release:hover{
-transform:translateY(-6px);
+.card:hover{
+transform:translateY(-8px);
 border-color:white;
 }
 
@@ -137,17 +189,15 @@ border-top:1px solid #111;
 
 <body>
 
-<!-- 🎬 BACKGROUND VIDEO -->
-<div class="video-bg">
-<video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-smoke-and-light-1573/1080p.mp4" type="video/mp4">
-</video>
-</div>
+<!-- SMOKE + OVERLAY -->
+<div class="smoke"></div>
+<div class="overlay"></div>
 
 <!-- HERO -->
 <section class="hero">
 
-<h1>THE RITZY</h1>
+<div class="glitch">THE RITZY</div>
+
 <p>Persian Hip-Hop Artist • Producer • Sound Engineer</p>
 
 <div>
@@ -164,8 +214,8 @@ border-top:1px solid #111;
 <h2>ABOUT</h2>
 
 <p>
-THE RITZY is a Persian Hip-Hop artist focused on cinematic sound,
-dark trap beats and underground music identity.
+THE RITZY is a Persian Hip-Hop artist focused on dark cinematic trap beats,
+underground sound design and emotional street music.
 </p>
 
 </section>
@@ -191,35 +241,24 @@ src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/theritzy&auto
 
 <h2>RELEASES</h2>
 
-<div class="releases">
+<div class="grid">
 
-<div class="release">
+<div class="card">
 <h3>Latest Track</h3>
-<p>Dark Hip-Hop / Cinematic Trap</p>
+<p>Dark Hip-Hop Beat</p>
 </div>
 
-<div class="release">
-<h3>Underground Beat</h3>
-<p>Raw street sound</p>
+<div class="card">
+<h3>Underground</h3>
+<p>Cinematic Trap Sound</p>
 </div>
 
-<div class="release">
+<div class="card">
 <h3>Experimental</h3>
-<p>Ambient hip-hop fusion</p>
+<p>Atmospheric Hip-Hop</p>
 </div>
 
 </div>
-
-</section>
-
-<!-- CONNECT -->
-<section>
-
-<h2>CONNECT</h2>
-
-<a class="btn" href="https://instagram.com/Ritzybeat">Instagram</a>
-<a class="btn" href="https://youtube.com/@theritzyboss">YouTube</a>
-<a class="btn" href="https://on.soundcloud.com/k8C2y8AoLXM3782Q5p">SoundCloud</a>
 
 </section>
 
