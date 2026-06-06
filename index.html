@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THE RITZY | Official Artist</title>
+<title>THE RITZY | Persian Hip-Hop Artist & Producer</title>
 
-<meta name="description" content="THE RITZY - Persian Hip-Hop Artist & Producer. Dark beats, trap and underground sound.">
+<meta name="description" content="THE RITZY is a Persian Hip-Hop artist and producer creating dark trap beats, cinematic soundscapes and underground music.">
+<meta name="keywords" content="THE RITZY, Ritzy music, Persian hiphop, underground rapper, trap producer, Iran artist, hiphop beats">
+<meta name="author" content="THE RITZY">
+
+<!-- Open Graph (for Google & social media preview) -->
+<meta property="og:title" content="THE RITZY | Official Artist">
+<meta property="og:description" content="Persian Hip-Hop Artist & Producer - Dark underground sound and cinematic beats.">
+<meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 
@@ -26,7 +33,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* BACKGROUND GLOW */
+/* BACKGROUND */
 .bg{
 position:fixed;
 width:100%;
@@ -36,12 +43,6 @@ radial-gradient(circle at 20% 20%, #111, transparent),
 radial-gradient(circle at 80% 80%, #1a1a1a, transparent),
 radial-gradient(circle at 50% 50%, #000, #000);
 z-index:-1;
-animation:fadebg 8s infinite alternate;
-}
-
-@keyframes fadebg{
-from{transform:scale(1);}
-to{transform:scale(1.1);}
 }
 
 /* HERO */
@@ -51,25 +52,18 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
 }
 
 .hero h1{
 font-size:clamp(60px,12vw,170px);
 letter-spacing:15px;
 font-weight:900;
-animation:fadeIn 2s ease;
 }
 
 .hero p{
 color:#bbb;
 margin-top:15px;
-animation:fadeIn 3s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+font-size:18px;
 }
 
 /* BUTTONS */
@@ -95,26 +89,12 @@ section{
 max-width:1100px;
 margin:auto;
 padding:120px 20px;
-opacity:0;
-animation:up 1s forwards;
-animation-delay:.3s;
-}
-
-@keyframes up{
-to{opacity:1; transform:translateY(0);}
 }
 
 h2{
 font-size:42px;
 margin-bottom:25px;
 letter-spacing:3px;
-}
-
-/* ABOUT */
-.about p{
-color:#bbb;
-line-height:2;
-font-size:18px;
 }
 
 /* MUSIC */
@@ -125,7 +105,7 @@ border-radius:20px;
 background:#0b0b0b;
 }
 
-/* SOCIAL */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -145,7 +125,12 @@ transform:translateY(-10px);
 border-color:white;
 }
 
-/* WOLF LOGO PLACEHOLDER */
+.card a{
+color:white;
+text-decoration:none;
+}
+
+/* LOGO */
 .logo{
 width:120px;
 height:120px;
@@ -156,8 +141,9 @@ margin-bottom:20px;
 display:flex;
 align-items:center;
 justify-content:center;
-color:#555;
-font-size:14px;
+color:#777;
+font-size:12px;
+letter-spacing:2px;
 }
 
 /* FOOTER */
@@ -181,9 +167,7 @@ border-top:1px solid #111;
 
 <div>
 
-<div class="logo">
-WOLF LOGO
-</div>
+<div class="logo">WOLF LOGO</div>
 
 <h1>THE RITZY</h1>
 
@@ -206,8 +190,8 @@ WOLF LOGO
 
 <p>
 THE RITZY is a Persian Hip-Hop artist and producer from Iran.
-Focused on dark hip-hop beats, trap rhythms, and underground sound design.
-This project represents raw emotion, street culture, and cinematic sound.
+He creates dark trap beats, underground hip-hop sound and cinematic music experiences.
+Focused on emotion, street culture and modern sound design.
 </p>
 
 </section>
@@ -221,26 +205,14 @@ This project represents raw emotion, street culture, and cinematic sound.
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no"
 allow="autoplay"
-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/theritzy&color=%23000000&auto_play=false">
+src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/theritzy&color=%23000000&auto_play=false&show_user=true">
 </iframe>
 
 </div>
 
 </section>
 
-<!-- PRESS / BRAND -->
-<section>
-
-<h2>PRESS</h2>
-
-<p>
-Independent artist building a unique identity in Persian underground hip-hop culture.
-Focused on emotional sound, cinematic production, and modern trap aesthetics.
-</p>
-
-</section>
-
-<!-- SOCIAL -->
+<!-- CONNECT -->
 <section>
 
 <h2>CONNECT</h2>
@@ -266,6 +238,7 @@ Focused on emotional sound, cinematic production, and modern trap aesthetics.
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2025 THE RITZY • All Rights Reserved
 </footer>
